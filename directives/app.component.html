@@ -1,0 +1,55 @@
+<table class="table">
+  <tr class="thead-dark">
+    <th>
+    Id
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      City
+    </th>
+  </tr>
+  <tr *ngFor="let user of users" >
+    <td class="table-success">
+      {{user.Id}}
+    </td>
+    <td class="table-primary"> 
+      {{user.Name}}
+    </td>
+    <td class="table-danger">
+      {{user.City}}
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<div class="list-group">
+<ul *ngFor="let person of people">
+  <li *ngIf="person.country==='India'" class="text-success">
+    {{person.name}} ({{person.country}})
+  </li>
+  <li *ngIf="person.country==='Pakistan'" class="text-primary">
+    {{person.name}} ({{person.country}})
+  </li>
+  <li *ngIf="person.country==='Boston'" class="text-danger">
+    {{person.name}} ({{person.country}})
+  </li>
+  <li *ngIf="person.country !=='Boston' && person.country !=='India' && person.country !=='Pakistan'" class="text-warning">
+    {{person.name}} ({{person.country}})
+  </li>
+</ul>
+</div>
+<br>
+<br>
+<h4>NgClass</h4>
+<ul *ngFor="let person of people">
+  <li [ngClass]="{
+    'text-success':person.country=='India',
+    'text-primary':person.country=='Pakistan',
+    'text-danger':person.country=='Boston'}">{{person.name}} ({{person.country}})</li>
+</ul>
+<br>
+<br>
+<h2 [ngClass]="{available:isAvailable,unavailable:!isAvailable}">My Product</h2>
+<br>
