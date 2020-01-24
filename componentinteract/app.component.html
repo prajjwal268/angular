@@ -1,0 +1,7 @@
+<div style="text-align: center;">
+  <h2>Welcome to {{message}}!</h2>
+  <app-test [parentData]="name"></app-test>
+  <app-test (childEvent)="message=$event" [parentData]="name"></app-test>
+  <!-- 2 baar app test kia hai isliye 2 button aa rha  -->
+
+</div>
