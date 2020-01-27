@@ -1,0 +1,21 @@
+<table border=1>
+  <tr>
+    <th>Book ID</th>
+    <th>Book Title</th>
+    <th>Book Author</th>
+    <th>Book Year of Publish</th>
+  </tr>
+  <tr>
+    <td><input type="text" placeholder="id" (input)="myFunc('id',$event.target.value)"></td>
+    <td><input type="text" placeholder="title" (input)="myFunc('title',$event.target.value)"></td>
+    <td><input type="text" placeholder="author" (input)="myFunc('author',$event.target.value)"></td>
+    <td><input type="text" placeholder="year" (input)="myFunc('year',$event.target.value)"></td>
+  </tr>
+  <tr *ngFor="let book of tabledata">
+  <td>{{book.id}}</td>
+  <td>{{book.title}}</td>
+  <td>{{book.author}}</td>
+  <td>{{book.year}}</td>
+</tr>
+
+</table>
