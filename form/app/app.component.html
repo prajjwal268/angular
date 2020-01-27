@@ -1,0 +1,17 @@
+<!-- <form #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
+  <input type="text" name="emailid" placeholder="Email" ngModel/><br> 
+  <input type="password" name="password" placeholder="Password" ngModel/><br> 
+  <input type="submit" value="show"/><br> 
+  </form> -->
+<br>
+<form [formGroup]="formdata" (ngSubmit)="onClickSubmit1(formdata.value)">
+  <input type="text" class="fortextbox" name="emailid" placeholder="emailid" formControlName="emailId" />
+  <br>
+  <input type="password" class="fortextbox" name="password" placeholder="Password" formControlName="passWd" />
+  <br>
+  <input type="submit" class="forsubmit" value="login" />
+  <br>
+</form>
+<div>
+  <p>Email is {{emailId}}</p>
+</div>
