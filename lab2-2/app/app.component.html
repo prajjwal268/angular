@@ -1,0 +1,18 @@
+<table border=1px>
+  <tr>
+ <td> <a href="#" (onmouseover)="asci=true" (click)="func('empId',asci);asci=!asci">ID</a></td>
+  <td><a href="#" (onmouseover)="asci=true" (click)="func('empName',asci);asci=!asci">NAME</a></td>
+    <td><a href="#" (onmouseover)="asci=true" (click)="func('empSal',asci);asci=!asci">SALARY</a></td>
+      <td><a href="#" (onmouseover)="asci=true" (click)="func('empDep',asci);asci=!asci">DEPARTMENT</a></td>
+ 
+</tr>
+  
+      <tr *ngFor="let emp of employee">
+        <td>{{emp.empId}}</td>
+        <td>{{emp.empName}}</td>
+        <td>{{emp.empSal}}</td>
+        <td>{{emp.empDep}}</td>
+      
+      </tr>
+</table>
+
