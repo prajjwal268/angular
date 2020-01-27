@@ -1,0 +1,40 @@
+<h1 class="text-center">{{pageTitle | titlecase}}</h1>
+<table class="table table-bordered">
+  <tr><th>id</th>
+    <th>name</th>
+    <th>city</th>
+    <th>salary</th>
+    <th>dob</th>
+
+</tr>
+    <tr *ngFor="let user of user">
+      <td>{{user.id}}</td>
+      <td>{{user.name|uppercase}}</td>
+      <td>{{user.city}}</td>
+      <td>{{user.salary|currency:'INR'}}</td>
+      <td>{{user.dob|date:'dd/MM/yyyy'}}</td>
+      
+      
+      
+    </tr>
+</table>
+<br>
+<table class="table table-bordered">
+  <tr><th>id</th>
+    <th>name</th>
+    <th>city</th>
+    <th>salary</th>
+    <th>dob</th>
+
+</tr>
+    <tr *ngFor="let user of nick">
+      <td>{{user.id}}</td>
+      <td>{{user.name|uppercase}}</td>
+      <td>{{user.city}}</td>
+      <td>{{user.salary|currency:'INR'}}</td>
+      <td>{{user.dob|date:'dd/MM/yyyy'}}</td>
+      
+      
+      
+    </tr>
+</table>
