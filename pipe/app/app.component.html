@@ -1,0 +1,20 @@
+<h1 class="text-center">{{pageTitle | titlecase}}</h1>
+<table class="table table-bordered">
+  <tr><th>id</th>
+    <th>name</th>
+    <th>city</th>
+    <th>salary</th>
+    <th>dob</th>
+  <th>fullDate</th>
+<th>Age</th></tr>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.name|uppercase}}</td>
+      <td>{{user.city}}</td>
+      <td>{{user.salary|currency:'INR'}}</td>
+      <td>{{user.dob|date:'dd/MM/yyyy'}}</td>
+      <td>{{user.dob|date:'fullDate'|uppercase}}</td>
+      <td>{{user.dob|age}}</td>
+      
+    </tr>
+</table>
