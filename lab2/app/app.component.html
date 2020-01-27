@@ -1,0 +1,46 @@
+<div>Angular 2 Operations</div>
+<div>{{msg}}</div>
+<h3>ADD EMPLOYEE</h3>
+<table>
+  <tr><td>ID</td>
+  <td><input type="text" [(ngModel)]="Id"></td></tr>
+  <tr><td>Name</td>
+    <td><input type="text" [(ngModel)]="Name"></td></tr>
+    <tr><td>Salary</td>
+      <td><input type="number" [(ngModel)]="Salary"></td></tr>
+      <tr><td>Department</td>
+        <td><input type="text" [(ngModel)]="Dept"></td></tr>
+        <tr><td><button (click)="addemp()">Add Employee</button></td><td></td></tr>
+</table>
+<h3>Show All EMPLOYEE</h3>
+<table border="1px">
+
+    <tr>    <th>ID</th>
+    <th>Name</th>
+    <th>Salary</th>
+    <th>Department</th>
+    <th colspan="2">ACTION</th>
+</tr>
+ 
+   
+  <tr *ngFor="let emp of employee">
+    <td>{{emp.id}}</td>
+    <td>{{emp.name}}</td>
+    <td>{{emp.salary}}</td>
+    <td>{{emp.department}}</td>
+    <td><button (click)="upemp(emp.id,emp.name,emp.salary,emp.department)">Update</button></td>
+    <td><button (click)="delemp(emp.id)">Delete</button></td>
+  </tr>
+ 
+</table>
+<h3>Update EMPLOYEE</h3>
+<table><tr><td>ID</td>
+    <td><input type="text" [(ngModel)]="Id1"></td></tr>
+    <tr><td>Name</td>
+      <td><input type="text" [(ngModel)]="Name1"></td></tr>
+      <tr><td>Salary</td>
+        <td><input type="number" [(ngModel)]="Salary1"></td></tr>
+        <tr><td>Department</td>
+          <td><input type="text" [(ngModel)]="Dept1"></td></tr>
+          <tr><td><button (click)="updateemp(Id1,Name1,Salary1,Dept1)">Update Employee</button></td><td></td></tr>
+</table>
