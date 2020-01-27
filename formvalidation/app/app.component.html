@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <h2>Angular 6 Validation</h2>
+  <form [formGroup]="angForm" novalidate>
+    <div class="form-group">
+      <label class="center-block">Stock Name: </label>
+      <input class="form-control" formControlName="name">
+    </div>
+    <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['name'].errors.required">
+          Name is required.
+        </div>
+      </div>
+    <div class="form-group">
+      <label class="center-block">Stock Price: </label>
+      <input class="form-control" formControlName="price">
+    </div>
+    <div *ngIf="angForm.controls['price'].invalid && (angForm.controls['price'].dirty || angForm.controls['price'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['price'].errors.required">
+          Price is required.
+        </div>
+      </div>
+    <div class="form-group">
+        <button class="btn btn-primary" color="primary" mat-raised-button type="submit" [disabled]="angForm.pristine || angForm.invalid">Submit</button>
+    </div>
+  </form>
+</div>
+
+<router-outlet></router-outlet>
