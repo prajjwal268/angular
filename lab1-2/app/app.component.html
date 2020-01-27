@@ -1,0 +1,26 @@
+<h4> List of Mobiles </h4>
+<table class="table">
+  <tr class="thead-dark">
+    <th>ID</th>
+    <th>Name</th>
+    <th>Cost</th>
+    <th>Type</th>
+  </tr>
+  <tr *ngFor="let mobile of mobiles">
+    <td>
+      {{mobile.mobileId}}&nbsp;&nbsp;&nbsp;
+    </td>
+    <td>
+      {{mobile.mobileName}}&nbsp;&nbsp;&nbsp;
+    </td>
+    <td>
+      {{mobile.mobileCost}}&nbsp;&nbsp;&nbsp;
+    </td>
+    <td *ngIf="mobile.mobileCost<15000">
+      <app-basic-phone></app-basic-phone>
+    </td>
+    <td *ngIf="mobile.mobileCost>=15000">
+      <app-smart-phone></app-smart-phone>
+    </td>
+  </tr>
+</table>
