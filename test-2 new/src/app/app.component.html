@@ -1,0 +1,17 @@
+<table border="1">
+  <tr>
+    <th (onmouseover)="asc=true" (click)="sortList('id',asc);asc=!asc;">id</th>
+    <th (onmouseover)="asc=true" (click)="sortList('title',asc);asc=!asc;">title</th>
+    <th (onmouseover)="asc=true" (click)="sortList('year',asc);asc=!asc;">year</th>
+    <th (onmouseover)="asc=true" (click)="sortList('author',asc);asc=!asc;">author</th>
+    <th>ACTION</th>
+        
+  </tr>
+  <tr *ngFor="let data of bookData">
+    <td>{{data.id}}</td>
+    <td>{{data.title}}</td>
+    <td>{{data.year}}</td>
+    <td>{{data.author}}</td>
+    <td><button (click)="deleteCol(data.id);">Delete</button></td>
+  </tr>
+</table>
