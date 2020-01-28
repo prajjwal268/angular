@@ -1,0 +1,16 @@
+<table border="2">
+    <tr>
+        <td (click)="sort('id')">ID</td>
+        <td (click)="sort('title')">TITLE</td>
+        <td (click)="sort('author')">AUTHOR</td>
+        <td (click)="sort('year')">YEAR</td>
+        <td>ACTION</td>
+    </tr>
+    <tr *ngFor="let i of list">
+        <td>{{i.id}}</td>
+        <td>{{i.title}}</td>
+        <td>{{i.author}}</td>
+        <td>{{i.year}}</td>
+        <td><button (click)='delete(i)'>DELETE</button></td>
+    </tr>
+</table>
