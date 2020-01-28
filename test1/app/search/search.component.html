@@ -1,0 +1,20 @@
+<h3>Search from Product List</h3>
+<input type="text" (input)="find=$event.target.value">
+
+<div>
+    <table border=1>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+        </tr>
+        <tr *ngFor="let product of booksdata| pipers:find">
+            <td>{{product.id}}</td>
+            <td>{{product.title}}</td>
+            <td>{{product.author}}</td>
+            <td>{{product.year}}</td>
+            
+        </tr>
+    </table>
+</div>
